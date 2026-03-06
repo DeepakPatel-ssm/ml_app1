@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 from flask_cors import CORS
 from dotenv import load_dotenv
 from data_cleaning import clean_data
+import pandas as pd
 
 load_dotenv()
 
