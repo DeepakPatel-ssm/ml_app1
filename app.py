@@ -57,3 +57,19 @@ def upload_file():
 
 if __name__ == "__main__":
     app.run()
+
+
+@app.route("/data", methods=["GET"])
+def get_data():
+    try:
+        query = "SELECT * FROM dataset"
+
+        df = pd.read_sql(query, engine)
+
+        return jsonify({
+            "rows": len(df),
+            "data": df.to_dict(orient="records")
+        })
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
