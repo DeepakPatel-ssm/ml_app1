@@ -55,10 +55,6 @@ def upload_file():
         return jsonify({"error": str(e)}), 500
 
 
-if __name__ == "__main__":
-    app.run()
-
-
 @app.route("/data", methods=["GET"])
 def get_data():
     try:
@@ -73,3 +69,8 @@ def get_data():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+if __name__ == "__main__":
+    app.run()
+
