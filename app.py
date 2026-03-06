@@ -49,7 +49,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Neon PostgreSQL connection
-DATABASE_URL = "postgresql://neondb_owner:npg_iEjZAknp63HS@ep-nameless-dew-aix0a760-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require"
+DATABASE_URL = "postgresql://neondb_owner:npg_Y7helpNVWU5Z@ep-young-river-a1c77s95-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode"
 
 engine = create_engine(
     DATABASE_URL,
