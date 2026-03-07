@@ -9,7 +9,7 @@ import pandas as pd
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app,origins="*")
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
